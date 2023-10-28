@@ -21,58 +21,20 @@
             cursor: pointer;
             z-index: 999;
         }
-
-        /* Make the iframe fill the entire screen and scrollable */
-        iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%; /* Set the width to 100% */
-            height: 100%; /* Set the height to 100% */
-            border: none;
-            overflow: auto; /* Allow scrolling within the iframe content */
-        }
     </style>
 </head>
 <body>
-    <div class="custom-button-container" onclick="openNewTab()">Open Fullscreen</div>
+    <div class="custom-button-container" onclick="openGame()">Open Game</div>
 
-    <section id="game1">
-        <h2>Game 1: Subwaysurfers</h2>
-        <iframe src="https://5uggz.github.io/subwaysurfers/"></iframe>
+    <section>
+        <h1>Welcome to the Games Website!</h1>
+        <p>Click the button above to play our exciting game.</p>
     </section>
 
-    <!-- Add more game sections as needed -->
-
     <script>
-        // Function to open the game in fullscreen
-        function openNewTab() {
-            var url = "https://5uggz.github.io/subwaysurfers/"; // Change the URL for each game
-            var win;
-
-            if (url) {
-                if (win) {
-                    win.focus();
-                } else {
-                    win = window.open();
-                    win.document.body.style.margin = '0';
-                    win.document.body.style.height = '100vh';
-                    var iframe = win.document.createElement('iframe');
-                    iframe.style.border = 'none';
-                    iframe.style.width = '100%';
-                    iframe.style.height = '100%';
-                    iframe.style.margin = '0';
-                    iframe.src = url;
-                    win.document.body.appendChild(iframe);
-
-                    var interval = setInterval(function () {
-                        if (win.closed) {
-                            clearInterval(interval);
-                            win = undefined;
-                        }
-                    }, 500);
-                }
-            }
+        // Function to open the game in a new window
+        function openGame() {
+            window.open('game.html', '_blank', 'width=800, height=600');
         }
     </script>
 </body>
