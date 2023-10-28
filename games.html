@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game - Subwaysurfers</title>
+    <style>
+        /* Style for the button */
+        .custom-button-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 20px;
+            font-family: 'Arial', sans-serif; /* Change the font-family to your preference */
+            border: none;
+            cursor: pointer;
+            z-index: 999;
+        }
+
+        /* Smaller iframe */
+        iframe {
+            width: 80%; /* Set the width to a smaller percentage */
+            height: 80vh; /* Set the height to a smaller value */
+            margin: 10px; /* Add a margin to center the iframe */
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-button-container" onclick="closeGame()">Close Game</div>
+
+    <iframe src="https://5uggz.github.io/subwaysurfers/"></iframe>
+
+    <script>
+        // Function to close the game window
+        function closeGame() {
+            window.close();
+        }
+    </script>
+</body>
+</html>
